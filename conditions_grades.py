@@ -17,4 +17,4 @@ if  user_input.isdigit():
     else:
         print('Not a valid grade!')
 else:
-    print('Not a real number')
+    print('Not a natural number!')

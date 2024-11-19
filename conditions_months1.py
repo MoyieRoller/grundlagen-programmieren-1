@@ -13,4 +13,4 @@ if user_input.isdigit():
     else:
         print('Not a valid month.')
 else:
-    print('Please enter a real number.')
+    print('Please enter a natural number between 1 and 12.')
