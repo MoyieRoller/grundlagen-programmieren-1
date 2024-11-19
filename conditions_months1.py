@@ -14,6 +14,3 @@ if user_input.isdigit():
         print('Not a valid month.')
 else:
     print('Please enter a real number.')
-
-
-
