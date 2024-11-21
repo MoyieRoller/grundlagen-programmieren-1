@@ -1,9 +1,9 @@
-coole_liste = []
+ultra_mega_list = []
 while True:
     user_input = input('Please insert list elements: ')
     if user_input.lower() == 'exit':
         break
-    else: coole_liste.append(user_input)
+    else: ultra_mega_list.append(user_input)
 
-coole_liste.sort()
-print(coole_liste)
+ultra_mega_list.sort()
+print(ultra_mega_list)
