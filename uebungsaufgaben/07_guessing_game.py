@@ -1,9 +1,15 @@
 import random
 import json
+from itertools import count
+
 
 def writescore(score):
-    with open('scores.json', 'wb') as f:
-        f.write(score)
+    with open('scores.json', 'w') as f:
+        json.dump(score, f)
+
+def readscore():
+    with open('scores.json', 'r') as f:
+        return json.load(f)
 
 counter = 0
 randomNumber = random.randint(1, 100)
@@ -11,10 +17,12 @@ randomNumber = random.randint(1, 100)
 name = input('Please enter your player name: ')
 
 while True:
-    userInput = input('Guess a number between 1 and 100. Type for --help for instructions: ')
+    userInput = input('Guess a number between 1 and 100. Type for --lastscore to show the score of the last game: ')
 
-    if userInput == '--help':
-        print('--score : shows list of all scores.\n--highscore : shows to current highscores')
+    if userInput == '--score':
+        lastscore = readscore()
+        print('Last game played by', lastscore["name"], ':', lastscore["score"], 'tries')
+        continue
 
     elif userInput.isdigit():
         userInput = int(userInput)
@@ -32,8 +40,8 @@ while True:
 
         else:
             counter += 1
-            gameStats = name + ": " + str(counter) + "\n"
-            writescore(gameStats)
+            result_dict = {'name': name, 'score': counter}
+            writescore(result_dict)
             print("Well done " + name + " ! You guessed the correct number and took {} tries.".format(counter))
             break
 
