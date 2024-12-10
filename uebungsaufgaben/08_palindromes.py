@@ -7,4 +7,4 @@ for char in userInput:
 
 isPalindrome = processedString == processedString[::-1]
 
-print(f'\'{userInput}\' is{" " if isPalindrome else " not "} a palindrome, have a look a this: {processedString}.)')
+print(f'\'{userInput}\' is{" " if isPalindrome else " not "}a palindrome, have a look a this: {processedString}.)')
