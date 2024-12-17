@@ -47,3 +47,13 @@ def get_cheapest_fruit(dict):
     return fruit[0]
 
 print('Lowest price:', get_cheapest_fruit(fruit_prices))
+
+min_val = 10000
+min_fruit = ''
+
+for fruit, price in fruit_prices.items():
+    if price < min_val:
+        min_val = price
+        min_fruit = fruit
+
+print(min_fruit, min_val)
