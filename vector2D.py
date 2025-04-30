@@ -4,7 +4,7 @@ class Point2D:
         self.x = p_x
         self.y = p_y
 
-    def add_point2ds(self, p_other):
+    def add_point2d(self, p_other):
         self.x = self.x + p_other.x
         self.y = self.y + p_other.y
 
